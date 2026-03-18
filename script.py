@@ -35,7 +35,26 @@ def ex4():
     return print(f"US$ {val:.2f}")
 
 
+def ex5():
+    brancos = int(input('Insira o total de votos brancos: '))
+    nulos = int(input('Insira o total de votos nulos: '))
+    validos = int(input('Insira o total de votos validos: '))
+    if 0 > brancos or 0 > nulos or 0 > validos:
+        print('Valores invalidos.')
+        ex5()
 
+    total = brancos + nulos + validos
+    print(f"Total: {total}\nNulos: {nulos/total*100}% \nBrancos: {brancos/total* 100}\nVálidos: {validos/total*100}%")
+
+
+def ex6():
+    raio = float(input('Insira o valor do raio: '))
+    if raio < 0:
+        print("Valor inválido.")
+
+    area = raio**2 * 3.1415
+
+    print(f'Aréa do circulo de raio {raio}: {area} ')
 
 
 
@@ -47,3 +66,15 @@ match exs:
 
     case 2:
         ex2()
+
+    case 3:
+        ex3()
+
+    case 4:
+        ex4()
+
+    case 5:
+        ex5()
+
+    case 6:
+        ex6()
