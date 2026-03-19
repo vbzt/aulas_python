@@ -56,6 +56,58 @@ def ex6():
 
     print(f'Aréa do circulo de raio {raio}: {area} ')
 
+def ex7():
+    custo = float(input('Insira o custo de fabricação: R$'))
+    if custo < 0:
+        print('Valor inválido.')
+        ex7()
+
+    finalPrice = (custo * 0.45) + (custo * 0.28) + custo
+    print(f'Valor final: R${finalPrice}')
+
+def ex8():
+    salario = float(input('Insira o salario: R$'))
+    if salario < 0:
+        print('Valor inválido.')
+        ex8()
+    print(f'Novo salario: R${salario * 1.25}')
+
+def ex9():
+    value = 780000
+    first = value * 0.46
+    second = value * 0.32
+    third = value * 0.22
+    print(f'Primeiro: R${first}\nSegundo: R${second}\nTerceiro: R${third}')
+
+def ex10():
+    value = 80
+    days = int(input('Insira a quantidade de dias trabalhados.'))
+    if 0 > days:
+        print('Valor invalido')
+        ex10()
+
+    print(f'Valor a ser pago: R${value * 0.92}')
+
+def ex11():
+    pao = 0.38
+    broa = 4.5
+    qnt_pao = int(input('Quantidade de pãos vendidos: '))
+    qnt_broa = int(input('Quantidade de broas vendidas: '))
+
+    total = (pao * qnt_pao) + (broa * qnt_broa)
+    print(f'Vendas totais: R${total}, Quantidade a guardar: R${total * 0.1}')
+
+def ex12():
+    comprimento = float(input('Digite o comprimento da cozinha: '))
+    altura = float(input('Digite a altura da cozinha: '))
+    largura = float(input('Digite a largura da cozinha: '))
+
+    parede_larg = altura * largura
+    parede_comp = altura * comprimento
+
+    area = parede_comp * 2 + parede_larg * 2
+    caixas = (area // 1.5) + 1
+    print(f'Quantidade de caixas: {caixas}.')
 
 
 exs = int(input('Escolha um exercicio: '))
