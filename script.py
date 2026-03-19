@@ -91,8 +91,13 @@ def ex10():
 def ex11():
     pao = 0.38
     broa = 4.5
+
     qnt_pao = int(input('Quantidade de pãos vendidos: '))
     qnt_broa = int(input('Quantidade de broas vendidas: '))
+
+    if qnt_pao < 0 or qnt_broa < 0:
+        print('Valores invalidos.')
+        ex11()
 
     total = (pao * qnt_pao) + (broa * qnt_broa)
     print(f'Vendas totais: R${total}, Quantidade a guardar: R${total * 0.1}')
@@ -101,6 +106,10 @@ def ex12():
     comprimento = float(input('Digite o comprimento da cozinha: '))
     altura = float(input('Digite a altura da cozinha: '))
     largura = float(input('Digite a largura da cozinha: '))
+
+    if comprimento < 0 or altura < 0 or largura < 0:
+        print('Valor invalido.')
+        ex12()
 
     parede_larg = altura * largura
     parede_comp = altura * comprimento
@@ -130,3 +139,23 @@ match exs:
 
     case 6:
         ex6()
+
+    case 7:
+        ex7()
+
+    case 8:
+        ex8()
+
+    case 9:
+        ex9()
+
+    case 10:
+        ex10()
+
+    case 11:
+        ex11()
+
+    case 12:
+        ex12()
+
+
