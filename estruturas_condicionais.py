@@ -29,7 +29,7 @@ def ex5():
 def ex6():
     h = int(input("Insira as horas"))
     m = int(input("Insira os minutos"))
-    if h >= 24 or h < 0 or m >= 60 or m < 0:
+    if 0 > h >= 24 or m >= 60 or m < 0:
         print("Horas invalidas.")
 
     print("Horas validas")
