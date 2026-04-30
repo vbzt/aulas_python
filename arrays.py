@@ -84,7 +84,36 @@ def ex6():
           f"Média:{sum / (len(grades))}\n"
           f"Quantidade acima da media: {avg}"
           )
+    
+lista = [3,10,7,8,1,9,8,5,8]
+def listaMin():
+  min = 0
+  for i in range(len(lista)): 
+    if i == 0: 
+      min = lista[i]
 
+    if lista[i] < min: 
+      min = lista[i]
+    
+  return min
+  
+def listaMax():
+  max = 0
+
+
+  for i in range(len(lista)): 
+    if i == 0: 
+      max = lista[i]
+    if lista[i] > max: 
+      max = lista[i]
+    
+  return max
+    
+
+#print(listaMin())
+#print(listaMax())
+
+    
 ex = int(input("Ex: "))
 
 match ex:
